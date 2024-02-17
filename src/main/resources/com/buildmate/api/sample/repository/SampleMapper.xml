@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buildmate.api.sample.repository.SampleMapper">
+    <select id="findAllSamples" resultType="com.buildmate.api.sample.entity.Sample">
+        SELECT * FROM SAMPLE;
+    </select>
+
+    <select id="findSample" resultType="com.buildmate.api.sample.entity.Sample">
+        SELECT *
+        FROM SAMPLE
+        WHERE sample_id = #{sampleId};
+    </select>
+</mapper>
